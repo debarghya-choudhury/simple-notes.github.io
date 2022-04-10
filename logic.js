@@ -28,7 +28,6 @@ note_submit_btn.addEventListener("click", e => {
             <button type="submit"
                 class="border-indigo-900 border-3 font-medium shadow-lg bg-orange-300  px-2 py-1 mt-1 w-38 tracking-widest delete">Delete</button>
         </div>`;
-        // console.log(newNoteDiv.innerHTML);as
         notes_grid.append(newNoteDiv);
         num++;
     }
@@ -105,11 +104,10 @@ search_button.addEventListener("click", (e) => {
         search_notes.value = "";
     } else if (hide.classList.contains("hidden")) {
         for (var i = 0; i < generated_notes.length; i++) {
-            if (generated_notes[i].textContent.includes(search_notes.value)) {
+            if (generated_notes[i].textContent.toLowerCase().includes(search_notes.value.toLowerCase())) {
                 var n = generated_notes[i].parentNode.cloneNode(true)
                 results.innerHTML += ""
                 results.append(n);
-                // generated_notes[i].classList.remove("generated-note")
                 n.childNodes[0].nextElementSibling.classList.remove("generated-note")
                 hide.classList.remove("hidden")
                 notez.classList.add("hidden")
