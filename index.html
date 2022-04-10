@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./logic.js" defer></script>
+    <title>Magic Notes</title>
+</head>
+
+<body>
+
+    <div class="bg-orange-50 h-[100vh]">
+
+        <header>
+            <div class="navbar bg-indigo-900 h-fit">
+                <ul class="sm:px-5 flex px-3 py-3 content-center justify-center">
+                    <li class="nav nav-brand font-extrabold text-2xl text-white">
+                        <a class="shadow-xl" href="./index.html">Magic Notes</a>
+                    </li>
+                    <!-- <li class="nav ml-6"><a href="#" class="text-white">Home</a></li> -->
+                    <li class="nav ml-auto flex">
+                        <!-- <form action="#" method="post" class="flex">
+                            <input
+                                class="search_input sm:w-auto sm:rounded-r-none w-36 border-orange-300 border-2 rounded-lg shadow-lg px-4 py-1"
+                                type="text" name="Search" placeholder="Search Notes" />
+                            <input
+                                class="search_button sm:block hidden border-orange-300 border-2 font-medium shadow-lg bg-orange-300 rounded-r-lg px-4 py-1"
+                                type="submit" name="inp_btn" value="Search" />
+                        </form> -->
+                        <input
+                            class="search_input sm:w-auto rounded-r-none w-[7.7rem] border-orange-300 border-2 rounded-lg shadow-lg px-4 py-1"
+                            type="text" name="Search" placeholder="Search Notes" />
+                        <input
+                            class="search_button w-5  text-orange-300 sm:w-auto sm:text-black sm:block sm:border-orange-300 border-2 font-medium shadow-lg bg-orange-300 rounded-r-lg px-4 py-1 hover:cursor-pointer hover_ani"
+                            type="submit" name="inp_btn" value="Search" />
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="notepad flex flex-col place-items-center">
+
+            <div class="heading my-6">
+                <span
+                    class="font-serif font-extrabold text-2xl text-indigo-900 tracking-tight drop-shadow-2xl shadow-white bg-white border-indigo-900 border-t-2 p-[10px] sm:tracking-wider">
+                    Never
+                    Forget Things Again
+                </span>
+            </div>
+            <div class="w-[22rem] sm:w-[30rem] lg:w-[40rem] xl:w-[50rem]">
+                <div class="flex flex-col justify-start  bg-indigo-900 p-1 rounded-t-2xl">
+                    <div class="p-2 mx-auto font-serif font-semibold tracking-wider text-white text-xl">Add a Note</div>
+                    <div class=" bg-white">
+                        <form name="note-form" action="#" method="post">
+                            <!-- <label for="fname">Note Name :</label> -->
+                            <!-- <input type="text" id="fname" name="firstname" /> -->
+                            <textarea name="notes" placeholder="Whats on your schedule?" id="note"
+                                class="p-2 outline-0 w-[100%] min-h-[25vh]"></textarea>
+                            <input type="submit"
+                                class="note-submit-btn w-[100%] border-t-[1px] border-indigo-900 font-medium shadow-lg bg-orange-300 px-4 py-1 w-38 tracking-widest hover:cursor-pointer"
+                                value="Add" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+        <div class="sol sm:w-[60%] sm:mx-auto">
+            <hr class="mt-5 border-[1px] border-indigo-900">
+        <div class="hide hidden">
+            
+            <div class="flex justify-between mb-[0.6rem]">
+                <div class="heading flex justify-center mb-2">
+                    <h1
+                        class=" bg-white px-6 border-b-2 border-indigo-900  font-serif font-extrabold text-xl text-indigo-900 tracking-tight drop-shadow-2xl shadow-black search_results p-[10px] sm:tracking-wider">
+                        Search Results :-
+                    </h1>
+                </div>
+                <input type="submit"
+                    class="reset h-[2.35rem] note-submit-btn border-[1px] border-t-none border-indigo-900 font-medium shadow-lg bg-orange-300 px-4 w-38 tracking-widest hover:cursor-pointer"
+                    value="Back" />
+            </div>
+
+            <div class="bg-orange-50 pt-3 mx-3 flex justify-center">
+
+                <div class="results grid grid-flow-row grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1 gap-y-5 place-content-center"></div>
+
+            </div>
+            <hr class="mt-16 border-[1px] border-indigo-900">
+        </div>
+
+
+        <div class="notez">
+            <div class="heads flex justify-center mx-3 mb-2">
+                <h1
+                    class=" bg-white px-6 border-b-2 border-indigo-900  font-serif font-extrabold text-xl text-indigo-900 tracking-tight drop-shadow-2xl shadow-black p-[10px] sm:tracking-wider your-notes">
+                    Your Notes :-
+                </h1>
+            </div>
+
+            <div class="generated-notes-div bg-orange-50 pt-3 mx-3">
+
+                <div class="nothing-msg flex flex-col justify-evenly">
+                    <div class="create mx-auto text-center">Create a note to see them here! </div>
+                </div>
+
+                <div
+                    class="notes-grid grid grid-flow-row grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1 gap-y-5 place-items-center"></div>
+
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
