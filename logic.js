@@ -99,12 +99,12 @@ search_notes.addEventListener("keyup", (e) => {
 search_button.addEventListener("click", (e) => {
     e.preventDefault();
     var generated_notes = document.querySelectorAll(".generated-note");
-    if (notes_grid.textContent === "" || search_notes.value.trim() === "" || search_notes.value.trim() === "undefined") {
+    if (notes_grid.textContent === "" || search_notes.value === "" || search_notes.value === "undefined") {
         alert("Nothing Found");
         search_notes.value = "";
     } else if (hide.classList.contains("hidden")) {
         for (var i = 0; i < generated_notes.length; i++) {
-            if (generated_notes[i].textContent.toLowerCase().includes(search_notes.value.toLowerCase())) {
+            if (generated_notes[i].textContent.trim().toLowerCase().includes(search_notes.value.toLowerCase())) {
                 var n = generated_notes[i].parentNode.cloneNode(true)
                 results.innerHTML += ""
                 results.append(n);
