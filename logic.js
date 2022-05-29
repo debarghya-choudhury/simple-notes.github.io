@@ -99,7 +99,7 @@ search_notes.addEventListener("keyup", (e) => {
 search_button.addEventListener("click", (e) => {
     e.preventDefault();
     var generated_notes = document.querySelectorAll(".generated-note");
-    if (notes_grid.textContent === "" || search_notes.value === "" || search_notes.value === "undefined") {
+    if (notes_grid.textContent === "" || search_notes.value.trim() === "" || search_notes.value.trim() === "undefined") {
         alert("Nothing Found");
         search_notes.value = "";
     } else if (hide.classList.contains("hidden")) {
