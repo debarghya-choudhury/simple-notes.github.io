@@ -104,7 +104,7 @@ search_button.addEventListener("click", (e) => {
         search_notes.value = "";
     } else if (hide.classList.contains("hidden")) {
         for (var i = 0; i < generated_notes.length; i++) {
-            if (generated_notes[i].textContent.trim().toLowerCase().includes(search_notes.value.toLowerCase())) {
+            if (generated_notes[i].textContent.trim().toLowerCase().includes(search_notes.value.trim().toLowerCase())) {
                 var n = generated_notes[i].parentNode.cloneNode(true)
                 results.innerHTML += ""
                 results.append(n);
